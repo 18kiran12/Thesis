@@ -55,6 +55,14 @@ A linked list is a sequential list of nodes that hold data which point to other 
   - One end is used for insertion, i.e., rear end and another end is used for deletion of elements, i.e., front end.
   - uses 2 pointers (min)
   
+- **Priority Queue** is an extension of queue with following properties.
+  - Every item has a priority associated with it.
+  - An element with high priority is dequeued before an element with low priority.
+  - If two elements have the same priority, they are served according to their order in the queue.
+  - The priority part removal and addition is taken care of using a **_heap_**
+  - used for Dijkstra's Shortest Path alorithm, dynamically fetch the 'next best' or 'next worst' element.
+  
+- **heap** is a tree based DS that satisfies the _heap invariant_ (also called heap property): If A is a parent node of B then A is ordered with respect to B for all nodes A, B in the heap. This means value of the parent node is always greater than or equal to the value of the child node (**max heaps**) for all nodes or the other way around (**min heaps**). These are mostly binary trees but without a cycle.
 
 
 
