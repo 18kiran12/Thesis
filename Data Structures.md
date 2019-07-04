@@ -201,20 +201,6 @@ class UF:
     def __repr__(self):
         """Representation of the union find object."""
         return "UF(" + str(self) + ")"
-
-if __name__ == "__main__":
-    print("Union find data structure.")
-    N = int(raw_input("Enter number of items: "))
-    uf = UF(N)
-    print("Enter a sequence of space separated pairs of integers: ")
-    while True:
-        try:
-            p, q = [int(x) for x in raw_input().split()]
-            uf.union(p, q)
-        except:
-            break
-
-    print(str(uf.count()) + " components: " + str(uf))
 ```
 #### Path compression
 
@@ -302,3 +288,43 @@ class BST:
         else:
 return self.findNode(currentNode.rightChild, val)
 ```
+
+#### Traversing a Binary Search tree
+
+1. [Tree Traversal] (https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+
+### Section 8 (Hash Table)
+
+"_One data structure to rule them all_".
+
+A hash table (HT) is a data structure that provides a mapping from keys to values using a technique called hashing. Its similar to a dictionary datastructure. The only condition is that the keys used should be hashable. Hash table is a fancy word for an aarray with index as a hash funciton output.
+
+- _Hash collision_ : when 2 of the keys have the same hash function output we use 2 most common methods to correct it.
+
+	- Seperate chaining: deals with hash collisions by maintaining a data structure (usually a linked list) to hold all the different values which hashed to a particular value.
+	
+	- Open Addressing : deals with collsioins by finding another place within the hash table for the object to go by offsetting it from the position to which it hashed to.
+	
+complexity on average O(1) " constant time".
+
+#### Hash Function
+
+It is a function that maps a key 'x' to a whole number in a fixed range.
+- If H(x) = H(y) then objects x and y might be equal, but else they are definitely not equal
+
+#### Double Hashing
+
+DH is a probing method which probes according to a constant multiple of another hash function, P(k, x) = x * H2(k), where H2(k) is a second hash function. H2(k) must hash the same type of keys as H1(K)
+```python.
+# create a hash function that ouputs a value (0, 6) given a persons age and name
+
+def hash function(Person):
+	hash = person.age
+	hash = hash + len(person.name)
+	return hash%6
+```
+### Section 9 (Fenwick Tree or Binary indexed tree)
+
+A Fenwick Tree is a data structure that supports sum range queries as well as setting values in a static array and getting the value of the prefix sum up some index efficiently.
+- each cell is responsible for other cells as well.
+	- the position of the least significant bit determines the range of responsiblity that cell has to the cells below itself.
