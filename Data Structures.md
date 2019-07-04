@@ -4,16 +4,19 @@
 
 #### An Abstract data type : 
 
-ADT is an abstraction of a data structure which provides only the interface to which a data structure must adhere to. Like you want to get from one place to another is an abstract data type, however the means of getting there is defined by using a data structure and programming language. ADT does not have details on how it is supposed to be implemented.
+ADT is an abstraction of a data structure which provides only the interface to which a data structure must adhere to. For example, you would want to get from one place to another this is an abstract data type, however the means of getting there is defined by using a data structure and programming language. ADT does not have details on how it is supposed to be implemented.
 
 Example : List is a ADT and Dynamic array and Linked List is a data structure.
 
 
 #### time/space Complexity : 
 
+Questions mostly computer scientists end up asking themselves:
+
   - how much *time* algo need?
   - how much *space* does algo need?
-  
+
+#### The Big-O Notation:
   
   - Big - O Notation - Only cares about the worst case like what happens when input is arbitarly large. *n* is the input size coming into the algorithm.
     - O(1) describes an algorithm that will always execute in the same time (or space) regardless of the size of the input data set
